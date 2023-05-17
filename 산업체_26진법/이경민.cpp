@@ -1,4 +1,3 @@
-#include <stdio.h>
 #define STRING_SIZE 12800
 #define PARAM_SIZE 100
 #define DEPTH_SIZE 127
@@ -100,7 +99,6 @@ void finalize(char temp[], int index[], char arr[]) {
 	int i, j;
 	for (i = index[100]-1, j = 1; i >= 1; i--, j++) {
 		arr[j] = temp[i];
-		printf("%c", arr[j]);
 	}
 	arr[0] = temp[0];
 }
@@ -130,7 +128,7 @@ void test_main(char answer[STRING_SIZE], const char question[STRING_SIZE]) {
 		col++;i++;
 		temp[i] = 'A';
 
-		if (letter == NULL) {
+		if (letter == '\0') {
 			index[row] = col-1;
 			reset = row + 1;
 			break;
