@@ -29,7 +29,7 @@ static void build_data(char question[STRING_SIZE]) {
 }
 int main(void) {
 	unsigned int SCORE = 0;
-	for (int i = 0; i < 1; i++) {
+	for (int i = 0; i < 100; i++) {
 		char question[STRING_SIZE];
 		build_data(question);
 		char answer[STRING_SIZE];
